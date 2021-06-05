@@ -1,4 +1,4 @@
-# Curso de ReactJs en CoderHouse
+# Curso de ReactJs en CoderHouse - Andrade Daniel
 
 ## Iniciando el proyecto
 
