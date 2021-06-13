@@ -1,0 +1,34 @@
+.container-main {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-background {
+  background-image: url("./img/bg-home.png");
+  background-size: cover;
+  height: 100vh;
+  max-height: 840px;
+  max-width: 95%;
+  width: 100%;
+}
+
+.info-main {
+  margin-left: 80px;
+  width: 90%;
+}
+
+.title-home {
+  color: #fff;
+  font-family: "Playfair Display";
+  font-size: 65px;
+  font-weight: 900;
+  margin: 0px;
+}
+
+.first-title {
+  margin-top: 190px;
+}
+
+.btn-main {
+  margin-top: 60px;
+}
