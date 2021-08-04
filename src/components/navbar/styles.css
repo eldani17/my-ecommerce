@@ -7,16 +7,11 @@
   width: 100%;
 }
 
-.img-logo {
-  width: 138px;
-  height: 93px;
-  background-color: blue;
-}
-
 .container-navbar {
   flex: 1;
   margin-left: 80px;
 }
+
 .nav-bar {
   left: 0px;
   display: flex;

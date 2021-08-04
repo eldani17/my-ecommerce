@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.css";
 
-import Header from "../../components/header";
+import Navbar from "../../components/navbar";
 import MainSection from "../../components/main-section";
 
 function Home() {
@@ -10,10 +10,10 @@ function Home() {
   return (
     <>
       <div className="container">
-        <Header />
+        <Navbar />
       </div>
       <div className="container-fluid">
-        <MainSection titles={titles} />
+        <MainSection greeting={titles} />
       </div>
     </>
   );
