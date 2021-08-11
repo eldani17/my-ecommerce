@@ -1,0 +1,41 @@
+.container-count {
+  width: 100%;
+}
+
+.container-selector-count {
+  align-items: center;
+  border: 1px solid #c5bfbf;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.button-count {
+  background-color: #fff;
+  border: none;
+  color: #2f48d3;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.number-count {
+  font-weight: bold;
+}
+
+.button-add-cart {
+  background-color: #fff;
+  border: 1px solid #2f48d3;
+  border-radius: 5px;
+  color: #2f48d3;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 20px;
+  padding: 15px 0px;
+  width: 100%;
+}
+
+.button-add-cart:disabled {
+  cursor: none;
+  opacity: 0.5;
+}
