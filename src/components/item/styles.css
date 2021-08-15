@@ -1,0 +1,64 @@
+.container-item {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card-img {
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+
+.price {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.title-stock {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 0px 0px;
+}
+
+.title {
+  color: #282828;
+  font-family: "Playfair Display";
+  font-size: 26;
+  font-weight: bold;
+  margin: 0px;
+  text-transform: capitalize;
+}
+
+.stock {
+  font-family: "Poppins";
+  font-size: 16;
+  font-weight: 400;
+  color: #282828;
+}
+
+.category {
+  color: #7b7b7b;
+  font-family: "Poppins";
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0px 0px 10px 0px;
+  text-transform: uppercase;
+}
+
+.btn-order {
+  background-color: transparent;
+  border: none;
+  color: #ff7a00;
+  font-family: "Poppins";
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0px;
+  text-transform: uppercase;
+}
