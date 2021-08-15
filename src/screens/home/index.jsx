@@ -4,14 +4,10 @@ import "./style.css";
 
 import Navbar from "../../components/navbar";
 import MainSection from "../../components/main-section";
-import ItemCount from "../../components/item-count";
+import ItemListContainer from "../../components/item-list-container";
 
 function Home() {
   const titles = ["The", "Classic - Collection", "Shop House"];
-
-  const onAddProduct = (quantity) => {
-    console.log(`execute onAddProduct, quantity product: ${quantity}`);
-  };
 
   return (
     <>
@@ -22,7 +18,7 @@ function Home() {
         <MainSection greeting={titles} />
       </div>
       <div className="container">
-        <ItemCount stock={0} initial={5} onAdd={onAddProduct} />
+        <ItemListContainer />
       </div>
     </>
   );
