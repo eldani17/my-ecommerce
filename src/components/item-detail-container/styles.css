@@ -1,0 +1,10 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+  width: 100%;
+}
+
+.container-item-detail {
+  margin: 25px 0px;
+}
