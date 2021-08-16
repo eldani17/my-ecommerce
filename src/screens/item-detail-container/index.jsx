@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import "./styles.css";
 
-import { getProductById } from "../../mocks/products-mock";
+import { getProductById } from "../mocks/products-mock";
 
-import ItemDetail from "../item-detail";
-import Loading from "../loading";
+import ItemDetail from "../components/item-detail";
+import Loading from "../components/loading";
 
 function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
