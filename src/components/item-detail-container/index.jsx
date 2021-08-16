@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import "./styles.css";
+
 import { getProductById } from "../../mocks/products-mock";
+
 import ItemDetail from "../item-detail";
+import Loading from "../loading";
 
 function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
@@ -15,9 +18,7 @@ function ItemDetailContainer() {
   }, []);
   return (
     <>
-      {loading && (
-        <span className="loading">replace loading with spinner....</span>
-      )}
+      {loading && <Loading />}
       {!loading && <ItemDetail item={item} />}
     </>
   );

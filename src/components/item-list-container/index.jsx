@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import { getProductsMocks } from "../../mocks/products-mock";
-import ItemList from "../item-list";
 import "./styles.css";
+
+import { getProductsMocks } from "../../mocks/products-mock";
+
+import ItemList from "../item-list";
+import Loading from "../loading";
 
 function ItemListContainer() {
   const [loading, setLoading] = useState(true);
@@ -15,9 +18,7 @@ function ItemListContainer() {
   }, []);
   return (
     <>
-      {loading && (
-        <span className="loading">replace loading with spinner....</span>
-      )}
+      {loading && <Loading />}
       {!loading && <ItemList items={itemList} />}
     </>
   );
