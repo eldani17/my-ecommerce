@@ -5,8 +5,9 @@ import "./App.css";
 
 import Navbar from "./components/navbar";
 import Home from "./screens/home";
-import Shop from "./screens/shop";
 import NotFound from "./screens/not-found";
+import ItemListContainer from "./screens/item-list-container";
+import ItemDetailContainer from "./screens/item-detail-container";
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/shop">
-          <Shop />
+        <Route exact path="/shop">
+          <ItemListContainer />
         </Route>
         <Route path="/shop/product/:id">
-          <Shop />
+          <ItemDetailContainer />
         </Route>
         <Route path="*">
           <NotFound />

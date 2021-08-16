@@ -4,8 +4,8 @@ import "./styles.css";
 
 import { getProductsMocks } from "../../mocks/products-mock";
 
-import ItemList from "../item-list";
-import Loading from "../loading";
+import ItemList from "../../components/item-list";
+import Loading from "../../components/loading";
 
 function ItemListContainer() {
   const [loading, setLoading] = useState(true);
@@ -17,10 +17,10 @@ function ItemListContainer() {
     });
   }, []);
   return (
-    <>
+    <div className="container">
       {loading && <Loading />}
       {!loading && <ItemList items={itemList} />}
-    </>
+    </div>
   );
 }
 
