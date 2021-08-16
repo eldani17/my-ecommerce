@@ -19,6 +19,9 @@ function App() {
         <Route path="/shop">
           <Shop />
         </Route>
+        <Route path="/shop/product/:id">
+          <Shop />
+        </Route>
         <Route path="*">
           <NotFound />
         </Route>
