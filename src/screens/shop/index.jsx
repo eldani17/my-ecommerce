@@ -6,11 +6,9 @@ import ItemListContainer from "../../components/item-list-container";
 
 function Shop() {
   return (
-    <>
-      <div className="container">
-        <ItemListContainer />
-      </div>
-    </>
+    <div className="container">
+      <ItemListContainer />
+    </div>
   );
 }
 
