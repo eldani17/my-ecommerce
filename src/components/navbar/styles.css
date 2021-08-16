@@ -13,9 +13,10 @@
 }
 
 .nav-bar {
-  left: 0px;
   display: flex;
   justify-content: space-between;
+  left: 0px;
+  list-style: none;
   width: 500px;
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./styles.css";
 import searchIcon from "./img/search-icon.png";
@@ -7,20 +8,59 @@ import CartWidget from "../cart-widget/index";
 
 function Navbar() {
   return (
-    <>
+    <div className="container">
       <header className="container-header">
         <CartWidget />
         <div className="container-navbar">
-          <nav className="nav-bar">
-            {/* 
-            utilice tag span porque el ancor me tiraba error 
-            al no poner el href, esto es solo de manera momentanea
-          */}
-            <span className="nav-item nav-active">home</span>
-            <span className="nav-item">shop</span>
-            <span className="nav-item">about</span>
-            <span className="nav-item">blog</span>
-            <span className="nav-item">contact us</span>
+          <nav>
+            <ul className="nav-bar">
+              <li>
+                <NavLink
+                  exact
+                  to={`/`}
+                  className="nav-item"
+                  activeClassName="nav-active"
+                >
+                  home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`/shop`}
+                  className="nav-item"
+                  activeClassName="nav-active"
+                >
+                  shop
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`/about`}
+                  className="nav-item"
+                  activeClassName="nav-active"
+                >
+                  about
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`/blog`}
+                  className="nav-item"
+                  activeClassName="nav-active"
+                >
+                  blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`/contact-us`}
+                  className="nav-item"
+                  activeClassName="nav-active"
+                >
+                  contact us
+                </NavLink>
+              </li>
+            </ul>
           </nav>
         </div>
         <div className="navbar-actions">
@@ -33,7 +73,7 @@ function Navbar() {
           </div>
         </div>
       </header>
-    </>
+    </div>
   );
 }
 
