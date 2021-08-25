@@ -8,6 +8,7 @@ import Home from "./screens/home";
 import NotFound from "./screens/not-found";
 import ItemListContainer from "./screens/item-list-container";
 import ItemDetailContainer from "./screens/item-detail-container";
+import Cart from "./screens/cart";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/shop/product/:id">
           <ItemDetailContainer />
+        </Route>
+        <Route path="/shop/cart">
+          <Cart />
         </Route>
         <Route path="*">
           <NotFound />
