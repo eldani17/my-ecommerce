@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 import "./styles.css";
 
+import ItemCount from "./../item-count";
+
 function ItemDetail({ item }) {
   const { title, price, pictureUrl, description, picturesUrl } = item;
+  const [quantity, setQuantity] = useState(0);
+  const onAdd = (quantity) => {
+    setQuantity(quantity);
+  };
+
   return (
     <div className="container-item-detail">
       <div className="container-photos">
@@ -20,7 +28,14 @@ function ItemDetail({ item }) {
         <h1 className="title-detail">{title}</h1>
         <h6 className="category-detail">BLUE & WHITE</h6>
         <span className="price-detail">${price}</span>
-        <button className="btn-primary">ADD TO CART</button>
+        {quantity !== 0 && (
+          <NavLink exact to={`/shop/cart`}>
+            <button className="btn-primary" component={Link} to="/shop-cart">
+              TERMINAR MI COMPRA
+            </button>
+          </NavLink>
+        )}
+        {quantity === 0 && <ItemCount stock={20} initial={1} onAdd={onAdd} />}
         <span className="delivery-detail">
           Delivery from Ushuaia, 3-4 week delivery
         </span>
