@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 import "./styles.css";
 import searchIcon from "./img/search-icon.png";
 import cartIcon from "./img/cart-icon.png";
 import CartWidget from "../cart-widget/index";
+import { CartContext } from "../../context/cartContext";
 
 function Navbar() {
+  const { cart } = useContext(CartContext);
+
   return (
     <div className="container">
       <header className="container-header">
@@ -65,12 +68,14 @@ function Navbar() {
         </div>
         <div className="navbar-actions">
           <img src={searchIcon} alt="" />
-          <div className="container-cart">
-            <img src={cartIcon} alt="" />
-            <div className="position-cart-number">
-              <span className="cart-number">5</span>
+          <NavLink exact to={`/shop/cart`}>
+            <div className="container-cart">
+              <img src={cartIcon} alt="" />
+              <div className="position-cart-number">
+                <span className="cart-number">{cart.length}</span>
+              </div>
             </div>
-          </div>
+          </NavLink>
         </div>
       </header>
     </div>
